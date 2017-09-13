@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google MapsAPIVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GoogleMapsAPIVC" customModule="GoogleMapsRestAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jfb-f3-O9r"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvz-ar-iRl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTa-AP-fPB">
+                                <rect key="frame" x="50" y="20" width="274" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4w4-Qv-6Zs">
+                                <rect key="frame" x="16" y="52" width="343" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" id="dEd-Bq-IGd">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMJ-mV-vUv">
+                                <rect key="frame" x="130" y="613" width="114" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Click to View">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getDetailsBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBn-nc-7uf"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="asz-LU-gFm">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.60010065184049077" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="asz-LU-gFm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="16m-bd-qNr"/>
+                            <constraint firstItem="DMJ-mV-vUv" firstAttribute="top" secondItem="4w4-Qv-6Zs" secondAttribute="bottom" constant="8" id="CXC-aC-DOW"/>
+                            <constraint firstItem="asz-LU-gFm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgT-7R-2c0"/>
+                            <constraint firstItem="BTa-AP-fPB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="Gzm-xH-1Di"/>
+                            <constraint firstItem="4w4-Qv-6Zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="IgH-nZ-AhD"/>
+                            <constraint firstItem="DMJ-mV-vUv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="130" id="LQM-e2-14t"/>
+                            <constraint firstItem="BTa-AP-fPB" firstAttribute="top" secondItem="Jfb-f3-O9r" secondAttribute="bottom" id="LwJ-Jq-dnj"/>
+                            <constraint firstItem="gvz-ar-iRl" firstAttribute="top" secondItem="DMJ-mV-vUv" secondAttribute="bottom" constant="20" id="XJG-XU-HcY"/>
+                            <constraint firstItem="DMJ-mV-vUv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFc-Tf-ORa"/>
+                            <constraint firstItem="4w4-Qv-6Zs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQU-ne-xsw"/>
+                            <constraint firstItem="BTa-AP-fPB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zQk-L0-xLj"/>
+                            <constraint firstItem="4w4-Qv-6Zs" firstAttribute="top" secondItem="BTa-AP-fPB" secondAttribute="bottom" constant="8" id="zbP-kR-U4v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapsDetailsTable" destination="4w4-Qv-6Zs" id="EwZ-p4-t44"/>
+                        <outlet property="myLoader" destination="asz-LU-gFm" id="Cmk-0x-npB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
